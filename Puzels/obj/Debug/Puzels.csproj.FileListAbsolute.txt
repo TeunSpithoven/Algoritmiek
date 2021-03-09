@@ -1,0 +1,10 @@
+D:\Github\Gedeeld\Algoritmiek\Puzels\bin\Debug\Puzels.exe.config
+D:\Github\Gedeeld\Algoritmiek\Puzels\bin\Debug\Puzels.exe
+D:\Github\Gedeeld\Algoritmiek\Puzels\bin\Debug\Puzels.pdb
+D:\Github\Gedeeld\Algoritmiek\Puzels\obj\Debug\Puzels.csprojAssemblyReference.cache
+D:\Github\Gedeeld\Algoritmiek\Puzels\obj\Debug\Puzels.Form1.resources
+D:\Github\Gedeeld\Algoritmiek\Puzels\obj\Debug\Puzels.Properties.Resources.resources
+D:\Github\Gedeeld\Algoritmiek\Puzels\obj\Debug\Puzels.csproj.GenerateResource.cache
+D:\Github\Gedeeld\Algoritmiek\Puzels\obj\Debug\Puzels.csproj.CoreCompileInputs.cache
+D:\Github\Gedeeld\Algoritmiek\Puzels\obj\Debug\Puzels.exe
+D:\Github\Gedeeld\Algoritmiek\Puzels\obj\Debug\Puzels.pdb
