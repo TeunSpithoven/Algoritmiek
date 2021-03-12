@@ -96,6 +96,7 @@ namespace Puzels
             
             // zolang a groter is dan 1
             for (b = 2; a > 1; b++)
+            {
                 //als het huidige getal een priemgetal is
                 if (a % b == 0)
                 {
@@ -106,9 +107,11 @@ namespace Puzels
                         a /= b;
                         x++;
                     }
+
                     // print de priemfactoren en hoe vaak ze voorkomen
                     textBox3.Text += $"{b} x {x} -- ";
                 }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -118,18 +121,30 @@ namespace Puzels
             Vraag3();
         }
 
-        // ---------------------------------------------------------VRAAG 3------------------------------------------------------
+        // ---------------------------------------------------------VRAAG 4------------------------------------------------------
 
         public void Vraag4(int nummerEen, int nummerTwee)
         {
+            nummerEen = 999;
+            nummerTwee = 999;
+            bool wipwap = true;
             // het product van de twee invoervelden
             int product = nummerEen * nummerTwee;
-            
             // zolang dat product niet gespiegelt kan worden:
             while (SpiegelCheck(product) == false)
             {
-                nummerEen++;
-                nummerTwee++;
+                if (wipwap == true) {
+                    nummerEen--;
+                    textBoxEen.Text = nummerEen.ToString();
+                    wipwap = false;
+                }
+                else if (wipwap == false)
+                {
+                    nummerTwee--;
+                    textBoxTwee.Text = nummerTwee.ToString();
+                    wipwap = true;
+                }
+                product = nummerEen * nummerTwee;
             }
             // als die wel gespiegelt kan worden:
             if (SpiegelCheck(product))
@@ -139,6 +154,102 @@ namespace Puzels
             
         }
 
+        public void Vraag4_2(int nummerEen, int nummerTwee)
+        {
+            nummerEen = 999;
+            nummerTwee = 999;
+            bool wipwap = true;
+            // het product van de twee invoervelden
+            int product = nummerEen * nummerTwee;
+            // zolang dat product niet gespiegelt kan worden:
+            while (SpiegelCheck(product) == false)
+            {
+                if (wipwap == true)
+                {
+                    nummerEen -= 2;
+                    textBoxEen.Text = nummerEen.ToString();
+                    wipwap = false;
+                }
+                else if (wipwap == false)
+                {
+                    nummerTwee -=2 ;
+                    textBoxTwee.Text = nummerTwee.ToString();
+                    wipwap = true;
+                }
+                product = nummerEen * nummerTwee;
+            }
+            // als die wel gespiegelt kan worden:
+            if (SpiegelCheck(product))
+            {
+                textBox5.Text = product.ToString();
+            }
+
+        }
+
+        public void Vraag4_3(int nummerEen, int nummerTwee)
+
+        {
+            nummerEen = 999;
+            nummerTwee = 999;
+            bool wipwap = true;
+            // het product van de twee invoervelden
+            int product = nummerEen * nummerTwee;
+            // zolang dat product niet gespiegelt kan worden:
+            while (SpiegelCheck(product) == false)
+            {
+                if (wipwap == true)
+                {
+                    nummerEen -= 3;
+                    textBoxEen.Text = nummerEen.ToString();
+                    wipwap = false;
+                }
+                else if (wipwap == false)
+                {
+                    nummerTwee -= 3;
+                    textBoxTwee.Text = nummerTwee.ToString();
+                    wipwap = true;
+                }
+                product = nummerEen * nummerTwee;
+            }
+            // als die wel gespiegelt kan worden:
+            if (SpiegelCheck(product))
+            {
+                textBox6.Text = product.ToString();
+            }
+
+        }
+        public void Vraag4_7(int nummerEen, int nummerTwee)
+
+        {
+            nummerEen = 999;
+            nummerTwee = 999;
+            bool wipwap = true;
+            // het product van de twee invoervelden
+            int product = nummerEen * nummerTwee;
+            // zolang dat product niet gespiegelt kan worden:
+            while (SpiegelCheck(product) == false)
+            {
+                if (wipwap == true)
+                {
+                    nummerEen -= 7;
+                    textBoxEen.Text = nummerEen.ToString();
+                    wipwap = false;
+                }
+                else if (wipwap == false)
+                {
+                    nummerTwee -= 7;
+                    textBoxTwee.Text = nummerTwee.ToString();
+                    wipwap = true;
+                }
+                product = nummerEen * nummerTwee;
+            }
+            // als die wel gespiegelt kan worden:
+            if (SpiegelCheck(product))
+            {
+                textBox7.Text = product.ToString();
+            }
+
+        }
         public bool SpiegelCheck(int product)
         {
             bool returnBool;
@@ -146,20 +257,16 @@ namespace Puzels
             // deze werkt, als je 512 hebt, krijg je {5, 1, 2}
             int[] intArray = GetIntList(product);
 
-            int i = 0;
-            while (i < intArray.Length)
-            {
-                listBox1.Items.Add(intArray[i]);
-                i++;
-            }
-
             int a = 0;
             int b = intArray.Length -1;
             int succes = 0;
             
             // maximale lengte is 6 dus 3 keer checken van buiten naar binnen
-            while (a <= 3){
-                if (intArray[a] == intArray[b])
+            while (a <= 2)
+            {
+                int left = intArray[a];
+                int right = intArray[b];
+                if (left == right)
                 {
                     succes++;
                 }
@@ -193,8 +300,26 @@ namespace Puzels
             listOfInts.Reverse();
             return listOfInts.ToArray();
         }
-        
-        private void button4_Click(object sender, EventArgs e)
+
+        private void buttonTwee_Click(object sender, EventArgs e)
+        {
+            textBox5.Clear();
+            Vraag4_2(Convert.ToInt32(textBoxEen.Text), Convert.ToInt32(textBoxTwee.Text));
+        }
+
+        private void buttonDrie_Click(object sender, EventArgs e)
+        {
+            textBox6.Clear();
+            Vraag4_3(Convert.ToInt32(textBoxEen.Text), Convert.ToInt32(textBoxTwee.Text));
+        }
+
+        private void buttonVier_Click(object sender, EventArgs e)
+        {
+            textBox7.Clear();
+            Vraag4_7(Convert.ToInt32(textBoxEen.Text), Convert.ToInt32(textBoxTwee.Text));
+        }
+
+        private void buttonEen_Click_1(object sender, EventArgs e)
         {
             textBox4.Clear();
             Vraag4(Convert.ToInt32(textBoxEen.Text), Convert.ToInt32(textBoxTwee.Text));

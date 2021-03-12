@@ -43,11 +43,16 @@ namespace Puzels
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonEen = new System.Windows.Forms.Button();
             this.textBoxTwee = new System.Windows.Forms.TextBox();
             this.textBoxEen = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.buttonTwee = new System.Windows.Forms.Button();
+            this.buttonDrie = new System.Windows.Forms.Button();
+            this.buttonVier = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -200,22 +205,23 @@ namespace Puzels
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(539, 135);
+            this.textBox4.Location = new System.Drawing.Point(539, 42);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 50);
+            this.textBox4.Size = new System.Drawing.Size(93, 65);
             this.textBox4.TabIndex = 15;
+            this.textBox4.Text = "1";
             // 
-            // button4
+            // buttonEen
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
-            this.button4.Location = new System.Drawing.Point(384, 69);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 116);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "GO!";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonEen.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.buttonEen.Location = new System.Drawing.Point(384, 69);
+            this.buttonEen.Name = "buttonEen";
+            this.buttonEen.Size = new System.Drawing.Size(65, 56);
+            this.buttonEen.TabIndex = 14;
+            this.buttonEen.Text = "1";
+            this.buttonEen.UseVisualStyleBackColor = true;
+            this.buttonEen.Click += new System.EventHandler(this.buttonEen_Click_1);
             // 
             // textBoxTwee
             // 
@@ -223,6 +229,7 @@ namespace Puzels
             this.textBoxTwee.Name = "textBoxTwee";
             this.textBoxTwee.Size = new System.Drawing.Size(67, 20);
             this.textBoxTwee.TabIndex = 17;
+            this.textBoxTwee.Text = "999";
             // 
             // textBoxEen
             // 
@@ -230,6 +237,7 @@ namespace Puzels
             this.textBoxEen.Name = "textBoxEen";
             this.textBoxEen.Size = new System.Drawing.Size(65, 20);
             this.textBoxEen.TabIndex = 18;
+            this.textBoxEen.Text = "999";
             // 
             // label5
             // 
@@ -241,26 +249,83 @@ namespace Puzels
             this.label5.TabIndex = 19;
             this.label5.Text = " X";
             // 
-            // listBox1
+            // textBox5
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(539, 42);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(167, 95);
-            this.listBox1.TabIndex = 20;
+            this.textBox5.Location = new System.Drawing.Point(640, 42);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(93, 65);
+            this.textBox5.TabIndex = 20;
+            this.textBox5.Text = "1";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(541, 113);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(93, 72);
+            this.textBox6.TabIndex = 21;
+            this.textBox6.Text = "1";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(640, 113);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(93, 72);
+            this.textBox7.TabIndex = 22;
+            this.textBox7.Text = "1";
+            // 
+            // buttonTwee
+            // 
+            this.buttonTwee.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.buttonTwee.Location = new System.Drawing.Point(466, 69);
+            this.buttonTwee.Name = "buttonTwee";
+            this.buttonTwee.Size = new System.Drawing.Size(65, 56);
+            this.buttonTwee.TabIndex = 23;
+            this.buttonTwee.Text = "2";
+            this.buttonTwee.UseVisualStyleBackColor = true;
+            this.buttonTwee.Click += new System.EventHandler(this.buttonTwee_Click);
+            // 
+            // buttonDrie
+            // 
+            this.buttonDrie.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.buttonDrie.Location = new System.Drawing.Point(384, 131);
+            this.buttonDrie.Name = "buttonDrie";
+            this.buttonDrie.Size = new System.Drawing.Size(65, 54);
+            this.buttonDrie.TabIndex = 24;
+            this.buttonDrie.Text = "3";
+            this.buttonDrie.UseVisualStyleBackColor = true;
+            this.buttonDrie.Click += new System.EventHandler(this.buttonDrie_Click);
+            // 
+            // buttonVier
+            // 
+            this.buttonVier.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.buttonVier.Location = new System.Drawing.Point(468, 131);
+            this.buttonVier.Name = "buttonVier";
+            this.buttonVier.Size = new System.Drawing.Size(65, 53);
+            this.buttonVier.TabIndex = 25;
+            this.buttonVier.Text = "4";
+            this.buttonVier.UseVisualStyleBackColor = true;
+            this.buttonVier.Click += new System.EventHandler(this.buttonVier_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 541);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.buttonVier);
+            this.Controls.Add(this.buttonDrie);
+            this.Controls.Add(this.buttonTwee);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxEen);
             this.Controls.Add(this.textBoxTwee);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonEen);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.numericUpDown3);
             this.Controls.Add(this.label3);
@@ -300,11 +365,16 @@ namespace Puzels
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonEen;
         private System.Windows.Forms.TextBox textBoxTwee;
         private System.Windows.Forms.TextBox textBoxEen;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button buttonTwee;
+        private System.Windows.Forms.Button buttonDrie;
+        private System.Windows.Forms.Button buttonVier;
     }
 }
 
