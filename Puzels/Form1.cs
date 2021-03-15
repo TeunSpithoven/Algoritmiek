@@ -123,133 +123,47 @@ namespace Puzels
 
         // ---------------------------------------------------------VRAAG 4------------------------------------------------------
 
-        public void Vraag4(int nummerEen, int nummerTwee)
+        public int Vraag4()
         {
-            nummerEen = 999;
-            nummerTwee = 999;
-            bool wipwap = true;
-            // het product van de twee invoervelden
-            int product = nummerEen * nummerTwee;
-            // zolang dat product niet gespiegelt kan worden:
-            while (SpiegelCheck(product) == false)
-            {
-                if (wipwap == true) {
-                    nummerEen--;
-                    textBoxEen.Text = nummerEen.ToString();
-                    wipwap = false;
-                }
-                else if (wipwap == false)
-                {
-                    nummerTwee--;
-                    textBoxTwee.Text = nummerTwee.ToString();
-                    wipwap = true;
-                }
-                product = nummerEen * nummerTwee;
-            }
-            // als die wel gespiegelt kan worden:
-            if (SpiegelCheck(product))
-            {
-                textBox4.Text = product.ToString();
-            }
-            
-        }
+            int largestNumber;
+            List<int> numberList = new List<int>();
 
-        public void Vraag4_2(int nummerEen, int nummerTwee)
-        {
-            nummerEen = 999;
-            nummerTwee = 999;
+            int nummerEen = 999;
+            int nummerTwee = 999;
+            int product = nummerTwee * nummerEen;
+
+            Random rand = new Random();
+
             bool wipwap = true;
-            // het product van de twee invoervelden
-            int product = nummerEen * nummerTwee;
+
             // zolang dat product niet gespiegelt kan worden:
-            while (SpiegelCheck(product) == false)
+            while (numberList.Count < 10000)
             {
                 if (wipwap == true)
                 {
-                    nummerEen -= 2;
-                    textBoxEen.Text = nummerEen.ToString();
+                    nummerEen = rand.Next(100, 999);
+                    nummerTwee = rand.Next(100, 999);
                     wipwap = false;
                 }
                 else if (wipwap == false)
                 {
-                    nummerTwee -=2 ;
-                    textBoxTwee.Text = nummerTwee.ToString();
+                    nummerEen = rand.Next(100, 999);
+                    nummerTwee = rand.Next(100, 999);
                     wipwap = true;
+                }
+                if (SpiegelCheck(product))
+                {
+                    numberList.Add(product);
                 }
                 product = nummerEen * nummerTwee;
             }
-            // als die wel gespiegelt kan worden:
-            if (SpiegelCheck(product))
-            {
-                textBox5.Text = product.ToString();
-            }
-
+            //zoekt de grootste int in de lijst
+            largestNumber = numberList.Max();
+            labelNummerEen.Text = nummerEen.ToString();
+            labelNummerTwee.Text = nummerTwee.ToString();
+            return largestNumber;
         }
 
-        public void Vraag4_3(int nummerEen, int nummerTwee)
-
-        {
-            nummerEen = 999;
-            nummerTwee = 999;
-            bool wipwap = true;
-            // het product van de twee invoervelden
-            int product = nummerEen * nummerTwee;
-            // zolang dat product niet gespiegelt kan worden:
-            while (SpiegelCheck(product) == false)
-            {
-                if (wipwap == true)
-                {
-                    nummerEen -= 3;
-                    textBoxEen.Text = nummerEen.ToString();
-                    wipwap = false;
-                }
-                else if (wipwap == false)
-                {
-                    nummerTwee -= 3;
-                    textBoxTwee.Text = nummerTwee.ToString();
-                    wipwap = true;
-                }
-                product = nummerEen * nummerTwee;
-            }
-            // als die wel gespiegelt kan worden:
-            if (SpiegelCheck(product))
-            {
-                textBox6.Text = product.ToString();
-            }
-
-        }
-        public void Vraag4_7(int nummerEen, int nummerTwee)
-
-        {
-            nummerEen = 999;
-            nummerTwee = 999;
-            bool wipwap = true;
-            // het product van de twee invoervelden
-            int product = nummerEen * nummerTwee;
-            // zolang dat product niet gespiegelt kan worden:
-            while (SpiegelCheck(product) == false)
-            {
-                if (wipwap == true)
-                {
-                    nummerEen -= 7;
-                    textBoxEen.Text = nummerEen.ToString();
-                    wipwap = false;
-                }
-                else if (wipwap == false)
-                {
-                    nummerTwee -= 7;
-                    textBoxTwee.Text = nummerTwee.ToString();
-                    wipwap = true;
-                }
-                product = nummerEen * nummerTwee;
-            }
-            // als die wel gespiegelt kan worden:
-            if (SpiegelCheck(product))
-            {
-                textBox7.Text = product.ToString();
-            }
-
-        }
         public bool SpiegelCheck(int product)
         {
             bool returnBool;
@@ -301,28 +215,9 @@ namespace Puzels
             return listOfInts.ToArray();
         }
 
-        private void buttonTwee_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            textBox5.Clear();
-            Vraag4_2(Convert.ToInt32(textBoxEen.Text), Convert.ToInt32(textBoxTwee.Text));
-        }
-
-        private void buttonDrie_Click(object sender, EventArgs e)
-        {
-            textBox6.Clear();
-            Vraag4_3(Convert.ToInt32(textBoxEen.Text), Convert.ToInt32(textBoxTwee.Text));
-        }
-
-        private void buttonVier_Click(object sender, EventArgs e)
-        {
-            textBox7.Clear();
-            Vraag4_7(Convert.ToInt32(textBoxEen.Text), Convert.ToInt32(textBoxTwee.Text));
-        }
-
-        private void buttonEen_Click_1(object sender, EventArgs e)
-        {
-            textBox4.Clear();
-            Vraag4(Convert.ToInt32(textBoxEen.Text), Convert.ToInt32(textBoxTwee.Text));
+            textBox4.Text = Vraag4().ToString();
         }
     }
 }
