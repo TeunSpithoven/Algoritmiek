@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Circustrein Teun Spithoven", "Circustrein Teun Spithoven.csproj", "{A671F654-5DF9-4A59-9F57-CB05D2552720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircustreinTest", "..\CircustreinTest\CircustreinTest.csproj", "{1F182160-574C-4C3B-A88E-B5500D7677AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A671F654-5DF9-4A59-9F57-CB05D2552720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A671F654-5DF9-4A59-9F57-CB05D2552720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A671F654-5DF9-4A59-9F57-CB05D2552720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A671F654-5DF9-4A59-9F57-CB05D2552720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F182160-574C-4C3B-A88E-B5500D7677AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F182160-574C-4C3B-A88E-B5500D7677AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F182160-574C-4C3B-A88E-B5500D7677AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F182160-574C-4C3B-A88E-B5500D7677AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCEB2EF0-4675-4B3F-BA60-3CD3FD18A10E}
+	EndGlobalSection
+EndGlobal

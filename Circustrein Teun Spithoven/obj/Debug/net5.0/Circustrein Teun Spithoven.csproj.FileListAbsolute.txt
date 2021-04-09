@@ -1,0 +1,16 @@
+D:\Visual studio projecten\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein Teun Spithoven.exe
+D:\Visual studio projecten\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein Teun Spithoven.deps.json
+D:\Visual studio projecten\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein Teun Spithoven.runtimeconfig.json
+D:\Visual studio projecten\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein Teun Spithoven.runtimeconfig.dev.json
+D:\Visual studio projecten\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein Teun Spithoven.dll
+D:\Visual studio projecten\Circustrein Teun Spithoven\bin\Debug\net5.0\ref\Circustrein Teun Spithoven.dll
+D:\Visual studio projecten\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein Teun Spithoven.pdb
+D:\Visual studio projecten\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.csprojAssemblyReference.cache
+D:\Visual studio projecten\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual studio projecten\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.AssemblyInfoInputs.cache
+D:\Visual studio projecten\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.AssemblyInfo.cs
+D:\Visual studio projecten\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.csproj.CoreCompileInputs.cache
+D:\Visual studio projecten\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.dll
+D:\Visual studio projecten\Circustrein Teun Spithoven\obj\Debug\net5.0\ref\Circustrein Teun Spithoven.dll
+D:\Visual studio projecten\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.pdb
+D:\Visual studio projecten\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.genruntimeconfig.cache
