@@ -38,19 +38,14 @@ namespace Circustrein_Teun_Spithoven
                     if (wagon.Animals.Count == 0)
                     {
                         // telkens de grootste carnivoor
-                        List<Animal> carnivoresInList = new List<Animal>();
-                        carnivoresInList = animals.FindAll(x => x.IsCarnivore == true);
-                        if (carnivoresInList.Count != 0)
+                        Animal biggestCarnivore = FindBiggestCarnivore(animals);
+                        if (biggestCarnivore != null)
                         {
-                            List<Animal> biggestCarnivoreFirst = new List<Animal>();
-                            biggestCarnivoreFirst = carnivoresInList.OrderByDescending(x => x.Size).ToList();
-                            Animal biggestCarnivoreInCarnivoreList = biggestCarnivoreFirst.First();
-
-                            if (wagonMan.DoesAnotherAnimalFit(wagon.Points, biggestCarnivoreInCarnivoreList.Points))
+                            if (wagonMan.DoesAnotherAnimalFit(wagon.Points, biggestCarnivore.Points))
                             {
-                                wagon.Animals.Add(biggestCarnivoreInCarnivoreList);
-                                wagon.Points += biggestCarnivoreInCarnivoreList.Points;
-                                animals.RemoveAll(x => x.Id == biggestCarnivoreInCarnivoreList.Id);
+                                wagon.Animals.Add(biggestCarnivore);
+                                wagon.Points += biggestCarnivore.Points;
+                                animals.RemoveAll(x => x.Id == biggestCarnivore.Id);
                             }
                             else
                             {
@@ -111,7 +106,7 @@ namespace Circustrein_Teun_Spithoven
                         // als er nog een herbivoor is en er bij past doe die er in
                         List<Animal> herbivoresInList = new List<Animal>();
                         herbivoresInList = (animals.FindAll(x => x.IsCarnivore == false));
-                        
+
                         if (herbivoresInList.Count > 0)
                         {
                             int remainingSpace = 10 - wagon.Points;
@@ -122,6 +117,7 @@ namespace Circustrein_Teun_Spithoven
                                 wagon.Points += fittingHerbivores[0].Points;
                                 // verwijderen uit lijst waar id matcht
                                 animals.RemoveAll(x => x.Id == fittingHerbivores[0].Id);
+                                fittingHerbivores.RemoveAll(x => x.Id == fittingHerbivores[0].Id);
                             }
                             else
                             {
@@ -149,7 +145,6 @@ namespace Circustrein_Teun_Spithoven
 
         public void WagonPrinter(Wagon wagon)
         {
-            
             if (wagon.Id < 10)
             {
                 Console.WriteLine($"                                       -----{wagon.Id}-----");
@@ -170,7 +165,6 @@ namespace Circustrein_Teun_Spithoven
             {
                 Console.WriteLine($"                                       ---{wagon.Id}---");
             }
-
 
             foreach (var animal in wagon.Animals)
             {
@@ -202,8 +196,21 @@ namespace Circustrein_Teun_Spithoven
 
             Console.WriteLine("                                       -----------");
             Console.WriteLine("                                            |     ");
+        }
 
-            
+        public Animal FindBiggestCarnivore(List<Animal> animals)
+        {
+            List<Animal> carnivoresInList = new List<Animal>();
+            carnivoresInList = animals.FindAll(x => x.IsCarnivore == true);
+            if (carnivoresInList.Count != 0)
+            {
+                List<Animal> biggestCarnivoreFirst = new List<Animal>();
+                biggestCarnivoreFirst = carnivoresInList.OrderByDescending(x => x.Size).ToList();
+                Animal biggestCarnivoreInCarnivoreList = biggestCarnivoreFirst.First();
+
+                return biggestCarnivoreInCarnivoreList;
+            }
+            return null;
         }
     }
 }

@@ -37,5 +37,13 @@ namespace Circustrein_Teun_Spithoven
             Size = 69420;
             Points = 69420;
         }
+
+        public Animal(int id, bool isCarnivore, int size, int points)
+        {
+            Id = id;
+            IsCarnivore = isCarnivore;
+            Size = size;
+            Points = points;
+        }
     }
 }
