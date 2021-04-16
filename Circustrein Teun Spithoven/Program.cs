@@ -8,20 +8,21 @@ namespace Circustrein_Teun_Spithoven
     {
         static void Main(string[] args)
         {
-            // stopwatch
+            // stopwatch start
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
 
             // managers aanroepen
             AnimalMan animalMan = new AnimalMan();
+            WagonMan wagonMan = new WagonMan();
 
             // lijst met beesten maken
-            int animalsToMake = 7;
+            int animalsToMake = 6;
             List<Animal> Animals = new List<Animal>();
             Animals = animalMan.MakeAnimals(animalsToMake);
 
-            // als er beesten zijn
-            animalMan.WagonFiller(Animals);
+            // wagons vullen met de dierenlijst
+            wagonMan.WagonFiller(Animals);
             
             Console.WriteLine("                                           _____");
             Console.WriteLine("                                        ___ |[]|_n__n_I_c");

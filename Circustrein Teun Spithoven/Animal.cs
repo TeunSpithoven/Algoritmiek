@@ -30,14 +30,6 @@ namespace Circustrein_Teun_Spithoven
             Id = id;
         }
 
-        public Animal()
-        {
-            Id = 69420;
-            IsCarnivore = false;
-            Size = 69420;
-            Points = 69420;
-        }
-
         public Animal(int id, bool isCarnivore, int size, int points)
         {
             Id = id;
