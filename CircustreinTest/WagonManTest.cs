@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Circustrein_Teun_Spithoven;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -48,6 +49,23 @@ namespace CircustreinTest
 
             //assert
             Assert.AreEqual(false, doesItFit);
+        }
+
+        [TestMethod]
+        public void AddAnimalToWagon_MediumCarnivoreInEmptyWagon_AnimalAddedToWagon()
+        {
+            // arrange
+            WagonMan wagonMan = new WagonMan();
+            Wagon wagon = new Wagon(0);
+            List<Animal> animals = new List<Animal>();
+            Animal animal = new Animal(0, true, 1, 3);
+            animals.Add(animal);
+            
+            // act
+            wagonMan.AddAnimalToWagon(animals.First(), animals, wagon);
+            
+            // assert
+            Assert.AreEqual(animal, wagon.Animals.First());
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace Circustrein_Teun_Spithoven
@@ -10,8 +9,7 @@ namespace Circustrein_Teun_Spithoven
 
         public Wagon NewWagon()
         {
-            List<Animal> animals = new List<Animal>();
-            Wagon returnWagon = new Wagon(_id, animals);
+            Wagon returnWagon = new Wagon(_id);
             _id++;
             return returnWagon;
         }
@@ -26,8 +24,28 @@ namespace Circustrein_Teun_Spithoven
             return false;
         }
 
+        public void AddAnimalToWagon(Animal animal, List<Animal> animals, Wagon wagon)
+        {
+            wagon.Animals.Add(animal);
+            wagon.Points += animal.Points;
+            animals.RemoveAll(x => x.Id == animal.Id);
+        }
+
         public void WagonFiller(List<Animal> animals)
         {
+            // om hem korter te maken(hopelijk):
+            // samenvatting:
+            // nieuwe wagon
+            // zitten er beesten in de lijst?
+            // past er nog een beest bij?
+            //nog geen beest in wagon? pleur dan een beest er in!
+            // eerst de grootste carnivoren
+            // als de carnivoren op zijn door met de herbivoren
+            // zit er een carnivoor in de wagon
+            // is er een grotere herbivoor?
+            // geen carnivoor in de lijst, kijk wat er nog bij kan
+
+            TrainMan train = new TrainMan();
             AnimalMan animalMan = new AnimalMan();
             // nieuwe wagon
             Wagon wagon = NewWagon();
@@ -38,7 +56,7 @@ namespace Circustrein_Teun_Spithoven
                 // past er nog een beest bij?
                 if (wagon.Points < 10)
                 {
-                    //nog geen beest? pleur dan een beest er in!
+                    //nog geen beest in de wagon, doe die er dan een in
                     if (wagon.Animals.Count == 0)
                     {
                         // telkens de grootste carnivoor
@@ -47,13 +65,11 @@ namespace Circustrein_Teun_Spithoven
                         {
                             if (DoesAnotherAnimalFit(wagon.Points, biggestCarnivore.Points))
                             {
-                                wagon.Animals.Add(biggestCarnivore);
-                                wagon.Points += biggestCarnivore.Points;
-                                animals.RemoveAll(x => x.Id == biggestCarnivore.Id);
+                                AddAnimalToWagon(biggestCarnivore, animals, wagon);
                             }
                             else
                             {
-                                WagonPrinter(wagon);
+                                train.WagonPrinter(wagon);
                                 wagon = NewWagon();
                             }
                         }
@@ -63,12 +79,11 @@ namespace Circustrein_Teun_Spithoven
                             // als het past
                             if (DoesAnotherAnimalFit(wagon.Points, animals.Last().Points))
                             {
-                                wagon.Animals.Add(animals.Last());
-                                wagon.Points += animals.Last().Points;
-                                animals.Remove(animals.Last());
+                                AddAnimalToWagon(animals.Last(), animals, wagon);
                             }
                         }
                     }
+
                     // kan er een beest bij die niet opgegeten wordt of iemand op eet?
                     // zit er een carnivoor in de wagon?
                     if (wagon.Animals.Exists(x => x.IsCarnivore == true))
@@ -77,28 +92,26 @@ namespace Circustrein_Teun_Spithoven
                         Animal biggestCarnivoreInwagon = animalMan.FindBiggestCarnivore(wagon.Animals);
 
                         // is er een herbivoor die groter is, zo ja voeg toe, zo nee nieuwe wagon
-                        Animal biggerHerbivore = animals.Find(x => x.IsCarnivore == false && x.Size > biggestCarnivoreInwagon.Size);
+                        Animal biggerHerbivore = animals.Find(x =>
+                            x.IsCarnivore == false && x.Size > biggestCarnivoreInwagon.Size);
                         if (biggerHerbivore != null)
                         {
                             // toevoegen aan wagon als het past
                             if (DoesAnotherAnimalFit(wagon.Points, biggerHerbivore.Points))
                             {
-                                wagon.Animals.Add(biggerHerbivore);
-                                wagon.Points += biggerHerbivore.Points;
-                                // verwijderen uit lijst waar id matcht
-                                animals.RemoveAll(x => x.Id == biggerHerbivore.Id);
+                                AddAnimalToWagon(biggerHerbivore, animals, wagon);
                             }
                             // het past niet dus volgende wagon
                             else
                             {
-                                WagonPrinter(wagon);
+                                train.WagonPrinter(wagon);
                                 wagon = NewWagon();
                             }
                         }
                         // nee geen grotere herbivoor, nieuwe wagon
                         else
                         {
-                            WagonPrinter(wagon);
+                            train.WagonPrinter(wagon);
                             wagon = NewWagon();
                         }
                     }
@@ -110,110 +123,38 @@ namespace Circustrein_Teun_Spithoven
                         List<Animal> herbivoresInList = new List<Animal>();
                         herbivoresInList = (animals.FindAll(x => x.IsCarnivore == false));
 
-                        if (herbivoresInList != null)
+                        if (herbivoresInList.Count > 0)
                         {
                             // vind een herbivoor die past
                             int remainingSpace = 10 - wagon.Points;
                             List<Animal> fittingHerbivores = herbivoresInList.FindAll(x => x.Points <= remainingSpace);
                             // als die past voeg die toe
-                            if (DoesAnotherAnimalFit(wagon.Points, fittingHerbivores[0].Points))
+                            if (fittingHerbivores.Count > 0)
                             {
-                                wagon.Animals.Add(fittingHerbivores.First());
-                                wagon.Points += fittingHerbivores.First().Points;
-                                // verwijderen uit lijst waar id matcht
-                                animals.RemoveAll(x => x.Id == fittingHerbivores.First().Id);
+                                AddAnimalToWagon(fittingHerbivores.First(), animals, wagon);
                             }
                             // als die niet past, nieuwe wagon
                             else
                             {
-                                WagonPrinter(wagon);
+                                train.WagonPrinter(wagon);
                                 wagon = NewWagon();
                             }
                         }
-                        // geen herbivoren meer, nieuwe wagon
-                        else
-                        {
-                            WagonPrinter(wagon);
-                            wagon = NewWagon();
-                        }
-
-                        // zo niet, doe een kleinere carnivoor in als dat kan
                     }
                 }
                 // nee geen ruimte, nieuwe wagon
                 else
                 {
-                    WagonPrinter(wagon);
+                    train.WagonPrinter(wagon);
                     wagon = NewWagon();
                 }
             }
+
             // print de laatste wagon als er een beest in zit
             if (wagon.Animals.Count > 0)
             {
-                WagonPrinter(wagon);
+                train.WagonPrinter(wagon);
             }
-        }
-
-        public void WagonPrinter(Wagon wagon)
-        {
-            if (wagon.Id < 10)
-            {
-                Console.WriteLine($"                                       -----{wagon.Id}-----");
-            }
-            else if (wagon.Id < 100)
-            {
-                Console.WriteLine($"                                       -----{wagon.Id}----");
-            }
-            else if (wagon.Id < 1000)
-            {
-                Console.WriteLine($"                                       ----{wagon.Id}----");
-            }
-            else if (wagon.Id < 10000)
-            {
-                Console.WriteLine($"                                       ----{wagon.Id}---");
-            }
-            else if (wagon.Id < 100000)
-            {
-                Console.WriteLine($"                                       ---{wagon.Id}---");
-            }
-
-            foreach (var animal in wagon.Animals)
-            {
-                // print de bijbehorende eetgewoonte
-                if (animal.IsCarnivore == true)
-                {
-                    Console.WriteLine($"                                       |{Enum.IsCarnivore.Carnivore}|");
-                }
-                else
-                {
-                    Console.WriteLine($"                                       |{Enum.IsCarnivore.Herbivore}|");
-                }
-
-                // print de bijbehorende grootte
-                if (animal.Size == 0)
-                {
-                    Console.WriteLine($"                                       |  {Enum.Sizes.Small}  |");
-                }
-                else if (animal.Size == 1)
-                {
-                    Console.WriteLine($"                                       | {Enum.Sizes.Medium}  |");
-                }
-                else
-                {
-                    Console.WriteLine($"                                       |  {Enum.Sizes.Large}  |");
-                }
-                Console.WriteLine($"                                       |         |");
-            }
-
-            if (wagon.Points < 10)
-            {
-                Console.WriteLine($"                                       ---0{wagon.Points}pts---");
-            }
-            else
-            {
-                Console.WriteLine($"                                       ---{wagon.Points}pts---");
-            }
-            Console.WriteLine("                                            |     ");
         }
     }
 }

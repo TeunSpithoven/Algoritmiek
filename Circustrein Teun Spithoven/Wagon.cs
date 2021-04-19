@@ -12,9 +12,10 @@ namespace Circustrein_Teun_Spithoven
         public List<Animal> Animals { get; private set; }
         public int Points { get; set; }
 
-        public Wagon(int id, List<Animal> animals)
+        public Wagon(int id)
         {
             Id = id;
+            List<Animal> animals = new List<Animal>();
             Animals = animals;
             Points = 0;
         }
