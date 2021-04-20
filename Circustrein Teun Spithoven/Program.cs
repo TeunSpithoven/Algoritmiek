@@ -17,7 +17,7 @@ namespace Circustrein_Teun_Spithoven
             TrainMan train = new TrainMan();
             
             // lijst met beesten maken
-            int animalsToMake = 5;
+            int animalsToMake = 4;
             List<Animal> animals = animalMan.MakeAnimals(animalsToMake);
 
             // wagons vullen met de dierenlijst

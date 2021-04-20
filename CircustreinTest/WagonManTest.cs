@@ -67,5 +67,24 @@ namespace CircustreinTest
             // assert
             Assert.AreEqual(animal, wagon.Animals.First());
         }
+
+        [TestMethod]
+        public void FindFittingAnimal_MediumCarnivoreInWagonLargeHerbivoreInList_ReturnsLargeHerbivore()
+        {
+            // arrange
+            WagonMan wagonMan = new WagonMan();
+            Wagon wagon = wagonMan.NewWagon();
+            Animal mediumCarnivore = new Animal(0, true, 1, 3);
+            wagon.Animals.Add(mediumCarnivore);
+            List<Animal> animals = new List<Animal>();
+            Animal largeHerbivore = new Animal(1, false, 2, 5);
+            animals.Add(largeHerbivore);
+
+            // act
+            Animal foundAnimal = wagonMan.FindFittingAnimal(animals, wagon);
+
+            // assert
+            Assert.AreEqual(largeHerbivore, foundAnimal);
+        }
     }
 }
