@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Circustrein_Teun_Spithoven.Controllers;
+using Circustrein_Teun_Spithoven.Models;
 
 namespace Circustrein_Teun_Spithoven
 {
@@ -8,23 +10,25 @@ namespace Circustrein_Teun_Spithoven
         private static void Main(string[] args)
         {
             // stopwatch start
-            StopwatchMan stopwatchMan = new StopwatchMan();
+            StopwatchController stopwatchMan = new StopwatchController();
             stopwatchMan.Start();
 
             // managers aanroepen
-            AnimalMan animalMan = new AnimalMan();
-            WagonMan wagonMan = new WagonMan();
-            TrainMan train = new TrainMan();
+            AnimalController animalController = new AnimalController();
+            WagonController wagonController = new WagonController();
+            TrainController trainController = new TrainController();
             
             // lijst met beesten maken
             int animalsToMake = 4;
-            List<Animal> animals = animalMan.MakeAnimals(animalsToMake);
+            List<Animal> animals = animalController.MakeRandomAnimals(animalsToMake);
 
             // wagons vullen met de dierenlijst
-            wagonMan.WagonFiller(animals);
+            List<Wagon> wagons = new();
+            wagons = wagonController.WagonFiller(animals);
 
             // locomotief printen
-            train.PrintLocomotive();
+            trainController.PrintWagons(wagons);
+            trainController.PrintLocomotive();
 
             // stopwacht stop en print tijd
             stopwatchMan.Stop();
