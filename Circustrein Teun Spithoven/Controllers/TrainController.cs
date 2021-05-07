@@ -18,63 +18,56 @@ namespace Circustrein_Teun_Spithoven.Controllers
         {
             foreach (var wagon in wagons)
             {
-                if (wagon.Id < 10)
+                switch (wagon.Id)
                 {
-                    Console.WriteLine($"                                       -----{wagon.Id}-----");
-                }
-                else if (wagon.Id < 100)
-                {
-                    Console.WriteLine($"                                       -----{wagon.Id}----");
-                }
-                else if (wagon.Id < 1000)
-                {
-                    Console.WriteLine($"                                       ----{wagon.Id}----");
-                }
-                else if (wagon.Id < 10000)
-                {
-                    Console.WriteLine($"                                       ----{wagon.Id}---");
-                }
-                else if (wagon.Id < 100000)
-                {
-                    Console.WriteLine($"                                       ---{wagon.Id}---");
+                    case < 10:
+                        Console.WriteLine($"                                       -----{wagon.Id}-----");
+                        break;
+                    case < 100:
+                        Console.WriteLine($"                                       -----{wagon.Id}----");
+                        break;
+                    case < 1000:
+                        Console.WriteLine($"                                       ----{wagon.Id}----");
+                        break;
+                    case < 10000:
+                        Console.WriteLine($"                                       ----{wagon.Id}---");
+                        break;
+                    case < 100000:
+                        Console.WriteLine($"                                       ---{wagon.Id}---");
+                        break;
                 }
 
                 foreach (var animal in wagon.Animals)
                 {
                     // print de bijbehorende eetgewoonte
                     if (animal.IsCarnivore == true)
-                    {
                         Console.WriteLine($"                                       |{Enum.IsCarnivore.Carnivore}|");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"                                       |{Enum.IsCarnivore.Herbivore}|");
-                    }
 
-                    // print de bijbehorende grootte
-                    if (animal.Size == 0)
-                    {
-                        Console.WriteLine($"                                       |  {Enum.Sizes.Small}  |");
-                    }
-                    else if (animal.Size == 1)
-                    {
-                        Console.WriteLine($"                                       | {Enum.Sizes.Medium}  |");
-                    }
                     else
+                        Console.WriteLine($"                                       |{Enum.IsCarnivore.Herbivore}|");
+
+                    switch (animal.Size)
                     {
-                        Console.WriteLine($"                                       |  {Enum.Sizes.Large}  |");
+                        // print de bijbehorende grootte
+                        case 0:
+                            Console.WriteLine($"                                       |  {Enum.Sizes.Small}  |");
+                            break;
+                        case 1:
+                            Console.WriteLine($"                                       | {Enum.Sizes.Medium}  |");
+                            break;
+                        default:
+                            Console.WriteLine($"                                       |  {Enum.Sizes.Large}  |");
+                            break;
                     }
                     Console.WriteLine($"                                       |         |");
                 }
 
                 if (wagon.Points < 10)
-                {
                     Console.WriteLine($"                                       ---0{wagon.Points}pts---");
-                }
+                
                 else
-                {
                     Console.WriteLine($"                                       ---{wagon.Points}pts---");
-                }
+                
                 Console.WriteLine("                                            |     ");
             }
         }

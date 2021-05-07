@@ -1,6 +1,8 @@
 using Circustrein_Teun_Spithoven;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using Circustrein_Teun_Spithoven.Controllers;
+using Circustrein_Teun_Spithoven.Models;
 
 namespace CircustreinTest
 {
@@ -11,12 +13,11 @@ namespace CircustreinTest
         public void MakeAnimals_Count5_Succes()
         {
             // arrange
-            AnimalMan animalMan = new AnimalMan();
+            AnimalController animalMan = new AnimalController();
             int count = 5;
-            List<Animal> testAnimalList = new List<Animal>();
 
             // act
-            testAnimalList = animalMan.MakeAnimals(count);
+            List<Animal> testAnimalList = animalMan.MakeRandomAnimals(count);
 
             // assert
             Assert.IsNotNull(testAnimalList[0]);
@@ -30,15 +31,15 @@ namespace CircustreinTest
         public void MakeAnimals_CountZeroOrLower_ReturnsNull()
         {
             // arrange
-            AnimalMan animalMan = new AnimalMan();
+            AnimalController animalMan = new AnimalController();
             int countZero = 0;
             int countNegative = -4;
             List<Animal> testAnimalListZero = new List<Animal>();
             List<Animal> testAnimalListNegative = new List<Animal>();
 
             // act
-            testAnimalListZero = animalMan.MakeAnimals(countZero);
-            testAnimalListNegative = animalMan.MakeAnimals(countNegative);
+            testAnimalListZero = animalMan.MakeRandomAnimals(countZero);
+            testAnimalListNegative = animalMan.MakeRandomAnimals(countNegative);
 
             // assert
             Assert.IsNull(testAnimalListZero);
@@ -49,7 +50,7 @@ namespace CircustreinTest
         public void FindBiggestCarnivore_LargeCarnivore_ReturnsBiggestCarnivore()
         {
             // arrange
-            AnimalMan animalMan = new AnimalMan();
+            AnimalController animalMan = new AnimalController();
             List<Animal> animals = new List<Animal>();
             animals.Add(new Animal(0, true, 2, 5));
             animals.Add(new Animal(1, true, 1, 3));
@@ -69,7 +70,7 @@ namespace CircustreinTest
         public void FindBiggestCarnivore_NoCarnivore_ReturnsNull()
         {
             // arrange
-            AnimalMan animalMan = new AnimalMan();
+            AnimalController animalMan = new AnimalController();
             List<Animal> animals = new List<Animal>();
             animals.Add(new Animal(0, false, 2, 5));
             animals.Add(new Animal(1, false, 1, 3));
