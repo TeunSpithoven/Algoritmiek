@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Circustrein_Teun_Spithoven.Models;
+using System.Collections.Generic;
 using System.Linq;
-using Circustrein_Teun_Spithoven.Models;
 
 namespace Circustrein_Teun_Spithoven.Controllers
 {
@@ -34,56 +34,53 @@ namespace Circustrein_Teun_Spithoven.Controllers
 
         public Animal FindFittingAnimal(List<Animal> animals, Wagon wagon)
         {
-            AnimalController animalMan = new AnimalController();
-            // als er geen dier in de wagon zit voeg er dan een toe
-            if (wagon.Animals.Count == 0)
-            {
-                return animals.Last();
-            }
+            AnimalController animalController = new AnimalController();
+            List<Animal> herbivores = animals.FindAll(x => x.IsCarnivore == false);
+            Animal wagonCarnivore = animalController.FindBiggestCarnivore(wagon.Animals);
 
+            // als er nog carnivoren zijn en er geen dier in de wagon zit, voeg de grootste carnivoor toe
+            if (animals.Exists(x => x.IsCarnivore == true) && wagon.Animals.Count == 0)
+            {
+                return animalController.FindBiggestCarnivore(animals);
+            }
             // als er een carnivoor in de wagon zit
             if (wagon.Animals.Exists(x => x.IsCarnivore == true))
             {
                 // grootste carnivoor in de wagon
-                Animal biggestCarnivoreInwagon = animalMan.FindBiggestCarnivore(wagon.Animals);
 
-                // is er in de lijst een herbivoor die niet wordt opgegeten
-                Animal biggerHerbivore =
-                    animals.Find(x => x.IsCarnivore == false && x.Size > biggestCarnivoreInwagon.Size);
-                if (biggerHerbivore != null)
+                // welke dieren in de lijst passen er bij
+                List<Animal> fittingHerbivores = new();
+                foreach (var herbivore in herbivores)
                 {
-                    // toevoegen aan wagon als het past
-                    if (DoesAnotherAnimalFit(wagon.Points, biggerHerbivore.Points))
-                    {
-                        return biggerHerbivore;
-                    }
+                    if (herbivore.Size > wagonCarnivore.Size && DoesAnotherAnimalFit(wagon.Points, herbivore.Points))
+                        fittingHerbivores.Add(herbivore);
+                }
+
+                if (fittingHerbivores.Count <= 0) return null;
+                // toevoegen aan wagon als het past
+                return fittingHerbivores.First();
+            }
+            // er zit geen carnivoor in de wagon!
+
+            // als er nog een herbivoor is en er bij past doe die er in
+            List<Animal> herbivoresInList = animals.FindAll(x => x.IsCarnivore == false);
+
+            if (herbivoresInList.Count <= 0) return null;
+
+            // vind de herbivoren die passen
+            List<Animal> fittingHerbivoresInList = new List<Animal>();
+            foreach (var herbivore in herbivoresInList)
+            {
+                if (DoesAnotherAnimalFit(wagon.Points, herbivore.Points))
+                {
+                    fittingHerbivoresInList.Add(herbivore);
                 }
             }
-            // er zit geen carnivoor in de lijst!
-            else
+
+            // return een passende herbivoor als die er is
+            if (fittingHerbivoresInList.Count > 0)
             {
-                // als er nog een herbivoor is en er bij past doe die er in
-                List<Animal> herbivoresInList = new List<Animal>();
-                herbivoresInList = (animals.FindAll(x => x.IsCarnivore == false));
-
-                if (herbivoresInList.Count > 0)
-                {
-                    // vind de herbivoren die passen
-                    List<Animal> fittingHerbivores = new List<Animal>();
-                    foreach (var herbivore in herbivoresInList)
-                    {
-                        if (DoesAnotherAnimalFit(wagon.Points, herbivore.Points))
-                        {
-                            fittingHerbivores.Add(herbivore);
-                        }
-                    }
-
-                    // return een passende herbivoor als die er is
-                    if (fittingHerbivores.Count > 0)
-                    {
-                        return fittingHerbivores.First();
-                    }
-                }
+                return fittingHerbivoresInList.First();
             }
 
             return null;

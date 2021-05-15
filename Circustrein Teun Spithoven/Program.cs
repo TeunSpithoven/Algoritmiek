@@ -10,28 +10,27 @@ namespace Circustrein_Teun_Spithoven
         private static void Main(string[] args)
         {
             // stopwatch start
-            StopwatchController stopwatchMan = new StopwatchController();
-            stopwatchMan.Start();
+            StopwatchController stopwatchController = new();
+            stopwatchController.Start();
 
             // managers aanroepen
-            AnimalController animalController = new AnimalController();
-            WagonController wagonController = new WagonController();
-            TrainController trainController = new TrainController();
+            AnimalController animalController = new();
+            WagonController wagonController = new();
+            TrainController trainController = new();
             
-            // lijst met beesten maken
-            int animalsToMake = 4;
+            // random dieren maken
+            int animalsToMake = 10;
             List<Animal> animals = animalController.MakeRandomAnimals(animalsToMake);
 
-            // wagons vullen met de dierenlijst
-            List<Wagon> wagons = new();
-            wagons = wagonController.WagonFiller(animals);
+            // wagons vullen met dieren
+            List<Wagon> wagons = wagonController.WagonFiller(animals);
 
             // locomotief printen
             trainController.PrintWagons(wagons);
             trainController.PrintLocomotive();
 
-            // stopwacht stop en print tijd
-            stopwatchMan.Stop();
+            // Stopwatch stop
+            stopwatchController.Stop();
         }
     }
 }
