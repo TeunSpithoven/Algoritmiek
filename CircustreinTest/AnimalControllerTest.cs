@@ -1,8 +1,7 @@
-using Circustrein_Teun_Spithoven;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using Circustrein_Teun_Spithoven.Controllers;
-using Circustrein_Teun_Spithoven.Models;
+using Circustrein.Controllers;
+using Circustrein.Models;
 
 namespace CircustreinTest
 {

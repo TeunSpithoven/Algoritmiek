@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Circustrein_Teun_Spithoven</RootNamespace>
+    <RootNamespace>Circustrein</RootNamespace>
+    <AssemblyName>Circustrein</AssemblyName>
   </PropertyGroup>
 
 </Project>

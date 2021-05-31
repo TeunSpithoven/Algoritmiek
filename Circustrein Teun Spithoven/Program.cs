@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using Circustrein_Teun_Spithoven.Controllers;
-using Circustrein_Teun_Spithoven.Models;
+﻿using System.Collections.Generic;
+using Circustrein.Controllers;
+using Circustrein.Models;
 
-namespace Circustrein_Teun_Spithoven
+namespace Circustrein
 {
     public class Program
     {
+        // made by Teun Spithoven
         private static void Main(string[] args)
         {
             // stopwatch start

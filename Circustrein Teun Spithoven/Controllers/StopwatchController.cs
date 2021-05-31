@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Circustrein_Teun_Spithoven.Controllers
+namespace Circustrein.Controllers
 {
     public class StopwatchController
     {

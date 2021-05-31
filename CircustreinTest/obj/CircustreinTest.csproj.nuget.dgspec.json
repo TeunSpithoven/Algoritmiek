@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Visual studio projecten\\CircustreinTest\\CircustreinTest.csproj": {}
+    "D:\\Github\\Algoritmiek\\CircustreinTest\\CircustreinTest.csproj": {}
   },
   "projects": {
-    "D:\\Visual studio projecten\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj": {
+    "D:\\Github\\Algoritmiek\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual studio projecten\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj",
-        "projectName": "Circustrein Teun Spithoven",
-        "projectPath": "D:\\Visual studio projecten\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj",
-        "packagesPath": "C:\\Users\\teun spithoven\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual studio projecten\\Circustrein Teun Spithoven\\obj\\",
+        "projectUniqueName": "D:\\Github\\Algoritmiek\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj",
+        "projectName": "Circustrein",
+        "projectPath": "D:\\Github\\Algoritmiek\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj",
+        "packagesPath": "C:\\Users\\teuns\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\Algoritmiek\\Circustrein Teun Spithoven\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Program Files\\Visual Studio Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\teun spithoven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\teuns\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,8 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -59,24 +58,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Visual studio projecten\\CircustreinTest\\CircustreinTest.csproj": {
+    "D:\\Github\\Algoritmiek\\CircustreinTest\\CircustreinTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual studio projecten\\CircustreinTest\\CircustreinTest.csproj",
+        "projectUniqueName": "D:\\Github\\Algoritmiek\\CircustreinTest\\CircustreinTest.csproj",
         "projectName": "CircustreinTest",
-        "projectPath": "D:\\Visual studio projecten\\CircustreinTest\\CircustreinTest.csproj",
-        "packagesPath": "C:\\Users\\teun spithoven\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual studio projecten\\CircustreinTest\\obj\\",
+        "projectPath": "D:\\Github\\Algoritmiek\\CircustreinTest\\CircustreinTest.csproj",
+        "packagesPath": "C:\\Users\\teuns\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\Algoritmiek\\CircustreinTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Program Files\\Visual Studio Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\teun spithoven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\teuns\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -85,15 +84,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Visual studio projecten\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj": {
-                "projectPath": "D:\\Visual studio projecten\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj"
+              "D:\\Github\\Algoritmiek\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj": {
+                "projectPath": "D:\\Github\\Algoritmiek\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj"
               }
             }
           }
@@ -140,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

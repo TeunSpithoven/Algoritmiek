@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Circustrein_Teun_Spithoven.Models;
+using Circustrein.Models;
 
-namespace Circustrein_Teun_Spithoven.Controllers
+namespace Circustrein.Controllers
 {
     public class TrainController
     {

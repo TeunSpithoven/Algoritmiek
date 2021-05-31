@@ -1635,14 +1635,14 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Circustrein Teun Spithoven/1.0.0": {
+      "Circustrein/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/Circustrein Teun Spithoven.dll": {}
+          "bin/placeholder/Circustrein.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Circustrein Teun Spithoven.dll": {}
+          "bin/placeholder/Circustrein.dll": {}
         }
       }
     }
@@ -5717,7 +5717,7 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Circustrein Teun Spithoven/1.0.0": {
+    "Circustrein/1.0.0": {
       "type": "project",
       "path": "../Circustrein Teun Spithoven/Circustrein Teun Spithoven.csproj",
       "msbuildProject": "../Circustrein Teun Spithoven/Circustrein Teun Spithoven.csproj"
@@ -5725,7 +5725,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Circustrein Teun Spithoven >= 1.0.0",
+      "Circustrein >= 1.0.0",
       "MSTest.TestAdapter >= 2.1.1",
       "MSTest.TestFramework >= 2.1.1",
       "Microsoft.NET.Test.Sdk >= 16.7.1",
@@ -5733,23 +5733,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\teun spithoven\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\teuns\\.nuget\\packages\\": {},
+    "D:\\Program Files\\Visual Studio Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Visual studio projecten\\CircustreinTest\\CircustreinTest.csproj",
+      "projectUniqueName": "D:\\Github\\Algoritmiek\\CircustreinTest\\CircustreinTest.csproj",
       "projectName": "CircustreinTest",
-      "projectPath": "D:\\Visual studio projecten\\CircustreinTest\\CircustreinTest.csproj",
-      "packagesPath": "C:\\Users\\teun spithoven\\.nuget\\packages\\",
-      "outputPath": "D:\\Visual studio projecten\\CircustreinTest\\obj\\",
+      "projectPath": "D:\\Github\\Algoritmiek\\CircustreinTest\\CircustreinTest.csproj",
+      "packagesPath": "C:\\Users\\teuns\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\Algoritmiek\\CircustreinTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Program Files\\Visual Studio Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\teun spithoven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\teuns\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5758,15 +5758,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Visual studio projecten\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj": {
-              "projectPath": "D:\\Visual studio projecten\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj"
+            "D:\\Github\\Algoritmiek\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj": {
+              "projectPath": "D:\\Github\\Algoritmiek\\Circustrein Teun Spithoven\\Circustrein Teun Spithoven.csproj"
             }
           }
         }
@@ -5813,7 +5812,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

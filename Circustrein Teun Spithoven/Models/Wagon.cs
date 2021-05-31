@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Circustrein_Teun_Spithoven.Models
+namespace Circustrein.Models
 {
     public class Wagon
     {

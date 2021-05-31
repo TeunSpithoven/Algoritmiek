@@ -1,9 +1,9 @@
-﻿using Circustrein_Teun_Spithoven.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Circustrein.Models;
 
-namespace Circustrein_Teun_Spithoven.Controllers
+namespace Circustrein.Controllers
 {
     public class AnimalController
     {
