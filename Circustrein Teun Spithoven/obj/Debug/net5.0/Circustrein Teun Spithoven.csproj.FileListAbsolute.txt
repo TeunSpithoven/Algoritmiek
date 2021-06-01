@@ -29,3 +29,19 @@ D:\Github\Algoritmiek\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein.pd
 D:\Github\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein.dll
 D:\Github\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\ref\Circustrein.dll
 D:\Github\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein.pdb
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein.exe
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein.deps.json
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein.runtimeconfig.json
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein.runtimeconfig.dev.json
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein.dll
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\bin\Debug\net5.0\ref\Circustrein.dll
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\bin\Debug\net5.0\Circustrein.pdb
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.csprojAssemblyReference.cache
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.AssemblyInfoInputs.cache
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.AssemblyInfo.cs
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.csproj.CoreCompileInputs.cache
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein.dll
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\ref\Circustrein.dll
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein.pdb
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\Circustrein Teun Spithoven\obj\Debug\net5.0\Circustrein Teun Spithoven.genruntimeconfig.cache

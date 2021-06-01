@@ -12,7 +12,7 @@ namespace CircustreinTest
         [TestMethod]
         public void NewWagon_IsNotNull()
         {
-            WagonController wagonMan = new WagonController();
+            WagonController wagonMan = new();
 
             Wagon wagon = wagonMan.NewWagon();
 
@@ -23,10 +23,10 @@ namespace CircustreinTest
         public void AddAnimalToWagon_MediumCarnivoreInEmptyWagon_AnimalAddedToWagon()
         {
             // arrange
-            WagonController wagonMan = new WagonController();
-            Wagon wagon = new Wagon(0);
-            List<Animal> animals = new List<Animal>();
-            Animal animal = new Animal(0, true, 1, 3);
+            WagonController wagonMan = new();
+            Wagon wagon = new(0);
+            List<Animal> animals = new();
+            Animal animal = new(0, true, 1, 3);
             animals.Add(animal);
 
             // act

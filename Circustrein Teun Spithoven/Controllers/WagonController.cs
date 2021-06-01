@@ -10,13 +10,12 @@ namespace Circustrein.Controllers
 
         public Wagon NewWagon()
         {
-            Wagon returnWagon = new Wagon(_id);
+            Wagon returnWagon = new(_id);
             _id++;
             return returnWagon;
         }
 
-        
-
+        #pragma warning disable CA1822 // Mark members as static
         public void AddAnimalToWagon(Animal animal, List<Animal> animals, Wagon wagon)
         {
             wagon.Animals.Add(animal);
@@ -24,12 +23,9 @@ namespace Circustrein.Controllers
             animals.RemoveAll(x => x.Id == animal.Id);
         }
 
-        
-
         public List<Wagon> WagonFiller(List<Animal> animals)
         {
             // Start
-            TrainController trainMan = new TrainController();
             List<Wagon> returnList = new();
 
             // nieuwe wagon
