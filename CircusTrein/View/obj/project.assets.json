@@ -8,19 +8,24 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\teuns\\.nuget\\packages\\": {}
+    "C:\\Users\\teuns\\.nuget\\packages\\": {},
+    "D:\\Program Files\\Visual Studio Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\View\\View.csproj",
+      "projectUniqueName": "D:\\Github\\Algoritmiek\\Circustrein\\View\\View.csproj",
       "projectName": "View",
-      "projectPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\View\\View.csproj",
+      "projectPath": "D:\\Github\\Algoritmiek\\Circustrein\\View\\View.csproj",
       "packagesPath": "C:\\Users\\teuns\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\View\\obj\\",
+      "outputPath": "D:\\Github\\Algoritmiek\\Circustrein\\View\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Program Files\\Visual Studio Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\teuns\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

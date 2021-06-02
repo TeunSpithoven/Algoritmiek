@@ -2,7 +2,8 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "C:\\Users\\teuns\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\teuns\\.nuget\\packages"
+      "C:\\Users\\teuns\\.nuget\\packages",
+      "D:\\Program Files\\Visual Studio Shared\\NuGetPackages"
     ]
   }
 }
