@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Test\\Test.csproj": {}
+    "D:\\Github\\Algoritmiek\\Circustrein\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj": {
+    "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj",
+        "projectUniqueName": "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj",
+        "projectPath": "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj",
         "packagesPath": "C:\\Users\\teuns\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\obj\\",
+        "outputPath": "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files\\Visual Studio Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\teuns\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,17 +62,21 @@
         }
       }
     },
-    "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Test\\Test.csproj": {
+    "D:\\Github\\Algoritmiek\\Circustrein\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Test\\Test.csproj",
+        "projectUniqueName": "D:\\Github\\Algoritmiek\\Circustrein\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Test\\Test.csproj",
+        "projectPath": "D:\\Github\\Algoritmiek\\Circustrein\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\teuns\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Test\\obj\\",
+        "outputPath": "D:\\Github\\Algoritmiek\\Circustrein\\Test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files\\Visual Studio Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\teuns\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +90,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj": {
-                "projectPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj"
+              "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj": {
+                "projectPath": "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj"
               }
             }
           }
