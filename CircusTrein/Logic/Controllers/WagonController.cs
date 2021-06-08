@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using Circustrein.Models;
+using Logic.Models;
 
-namespace Circustrein.Controllers
+namespace Logic.Controllers
 {
     public class WagonController
     {
@@ -25,13 +24,9 @@ namespace Circustrein.Controllers
 
         public List<Wagon> WagonFiller(List<Animal> animals)
         {
-            // Start
-            List<Wagon> returnList = new();
-
-            // nieuwe wagon
+            List<Wagon> wagons = new();
             Wagon wagon = NewWagon();
 
-            // is er een beest in de lijst
             while (animals.Count > 0)
             {
                 // is er een beest in de lijst die in de wagon past?
@@ -44,11 +39,11 @@ namespace Circustrein.Controllers
                 }
 
                 // nee nieuwe wagon
-                returnList.Add(wagon);
+                wagons.Add(wagon);
                 wagon = NewWagon();
             }
             // Stop
-            return returnList;
+            return wagons;
         }
     }
 }

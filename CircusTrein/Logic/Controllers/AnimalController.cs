@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Logic.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Circustrein.Models;
 
-namespace Circustrein.Controllers
+namespace Logic.Controllers
 {
     public class AnimalController
     {
@@ -44,14 +44,11 @@ namespace Circustrein.Controllers
         {
             List<Animal> carnivoresInList = animals.FindAll(x => x.IsCarnivore == true);
 
-            if (carnivoresInList.Count != 0)
-            {
-                List<Animal> biggestCarnivoreFirst = carnivoresInList.OrderByDescending(x => x.Size).ToList();
-                Animal biggestCarnivoreInCarnivoreList = biggestCarnivoreFirst.First();
-                return biggestCarnivoreInCarnivoreList;
-            }
+            if (carnivoresInList.Count <= 0) return null;
 
-            return null;
+            List<Animal> biggestCarnivoreFirst = carnivoresInList.OrderByDescending(x => x.Size).ToList();
+            Animal biggestCarnivoreInCarnivoreList = biggestCarnivoreFirst.First();
+            return biggestCarnivoreInCarnivoreList;
         }
 
         public static bool CanFitInWagon(Wagon wagon, Animal animal)

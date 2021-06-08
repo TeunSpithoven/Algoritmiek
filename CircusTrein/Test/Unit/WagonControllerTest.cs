@@ -1,10 +1,10 @@
-using Circustrein.Controllers;
-using Circustrein.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
+using Logic.Controllers;
+using Logic.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CircustreinTest
+namespace Test.Unit
 {
     [TestClass]
     public class WagonControllerTest

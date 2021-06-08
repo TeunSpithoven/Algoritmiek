@@ -1,11 +1,11 @@
-﻿using Circustrein.Controllers;
-using Circustrein.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using Enum = Circustrein.Enum;
+using Logic.Controllers;
+using Logic.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Enum = Logic.Enum;
 
-namespace CircustreinTest
+namespace Test.Unit
 {
     [TestClass]
     public class PreservationistTest
@@ -35,7 +35,7 @@ namespace CircustreinTest
             // arrange
             WagonController wagonMan = new();
             Wagon wagon = wagonMan.NewWagon();
-            Animal largeCarnivore = new(0, true, Convert.ToInt32(Circustrein.Enum.Sizes.Large), 5);
+            Animal largeCarnivore = new(0, true, Convert.ToInt32(Enum.Sizes.Large), 5);
             wagon.Animals.Add(largeCarnivore);
             List<Animal> animals = new();
             Animal mediumHerbivore = new(1, false, Convert.ToInt32(Enum.Sizes.Medium), 3);

@@ -1,4 +1,4 @@
-﻿namespace Circustrein.Models
+﻿namespace Logic.Models
 {
     public class Animal
     {

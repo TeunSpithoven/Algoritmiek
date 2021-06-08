@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Circustrein.Controllers;
-using Circustrein.Models;
+using Logic.Controllers;
+using Logic.Models;
 
-namespace Circustrein
+namespace Logic
 {
     public class Program
     {

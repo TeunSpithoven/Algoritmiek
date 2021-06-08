@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Circustrein.Models;
+using Logic.Models;
 
-namespace Circustrein.Controllers
+namespace Logic.Controllers
 {
     public class TrainController
     {

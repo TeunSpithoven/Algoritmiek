@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Circustrein.Controllers
+namespace Logic.Controllers
 {
     public class StopwatchController
     {

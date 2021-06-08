@@ -1,8 +1,8 @@
-﻿using Circustrein.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Logic.Models;
 
-namespace Circustrein.Controllers
+namespace Logic.Controllers
 {
     public class Preservationist
     {

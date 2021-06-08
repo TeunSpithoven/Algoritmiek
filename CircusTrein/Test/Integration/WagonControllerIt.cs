@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Circustrein.Controllers;
-using Circustrein.Models;
+using Logic.Controllers;
+using Logic.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json.Serialization;
 
-namespace CircustreinTest.Integration
+namespace Test.Integration
 {
     [TestClass]
     public class WagonControllerIt
@@ -53,7 +49,7 @@ namespace CircustreinTest.Integration
         }
 
         [TestMethod]
-        public void WagonFiller_One()
+        public void WagonFiller_3()
         {
 
         }

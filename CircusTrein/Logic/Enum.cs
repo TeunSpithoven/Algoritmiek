@@ -1,4 +1,4 @@
-﻿namespace Circustrein
+﻿namespace Logic
 {
     public static class Enum
     {
