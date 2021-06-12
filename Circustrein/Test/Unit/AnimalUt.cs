@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using Logic.Controllers;
 using Logic.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Enum = Logic.Enum;
 
 namespace Test.Unit
 {
@@ -15,7 +17,7 @@ namespace Test.Unit
             int count = 5;
 
             // act
-            List<Animal> testAnimalList = AnimalController.MakeRandomAnimals(count);
+            List<Animal> testAnimalList = Animal.MakeRandomAnimals(count);
 
             // assert
             Assert.IsNotNull(testAnimalList[0]);
@@ -33,8 +35,8 @@ namespace Test.Unit
             int countNegative = -4;
 
             // act
-            List<Animal> testAnimalListZero = AnimalController.MakeRandomAnimals(countZero);
-            List<Animal> testAnimalListNegative = AnimalController.MakeRandomAnimals(countNegative);
+            List<Animal> testAnimalListZero = Animal.MakeRandomAnimals(countZero);
+            List<Animal> testAnimalListNegative = Animal.MakeRandomAnimals(countNegative);
 
             // assert
             Assert.IsNull(testAnimalListZero);
@@ -53,7 +55,7 @@ namespace Test.Unit
             };
 
             // act
-            Animal biggestCarnivore = AnimalController.FindBiggestCarnivore(animals);
+            Animal biggestCarnivore = Animal.FindBiggestCarnivore(animals);
 
             // assert
             Assert.AreEqual(0, biggestCarnivore.Id);
@@ -74,10 +76,39 @@ namespace Test.Unit
             };
 
             // act
-            Animal biggestCarnivore = AnimalController.FindBiggestCarnivore(animals);
+            Animal biggestCarnivore = Animal.FindBiggestCarnivore(animals);
 
             // assert
             Assert.IsNull(biggestCarnivore);
+        }
+
+        
+        [TestMethod]
+        public void CanFitInWagon_SixPlusThree_ReturnsTrue()
+        {
+            // arrange
+            Wagon wagon = new() {Points = 6};
+            Animal animal = new(0, true, 1, 3);
+
+            // act
+            bool success = Animal.CanFitInWagon(wagon, animal);
+
+            //assert
+            Assert.AreEqual(true, success);
+        }
+
+        [TestMethod]
+        public void CanFitInWagon_SixPlusFive_ReturnsFalse()
+        {
+            // arrange
+            Wagon wagon = new() {Points = 6};
+            Animal animal = new(0, true, 2, 5);
+
+            // act
+            bool success = Animal.CanFitInWagon(wagon, animal);
+
+            //assert
+            Assert.IsFalse(success);
         }
     }
 }

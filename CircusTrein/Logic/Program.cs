@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using Logic.Controllers;
 using Logic.Models;
 
@@ -7,29 +8,21 @@ namespace Logic
     public class Program
     {
         // made by Teun Spithoven
-        private static void Main()
+        public static void Main()
         {
-            // stopwatch start
-            StopwatchController stopwatchController = new();
-            stopwatchController.Start();
+            StopwatchController.Start();
 
-            // managers aanroepen
-            WagonController wagonController = new();
-            TrainController trainController = new();
-            
-            // random dieren maken
-            int animalsToMake = 10;
-            List<Animal> animals = AnimalController.MakeRandomAnimals(animalsToMake);
+            // Make random animals
+            List<Animal> animals = Animal.MakeRandomAnimals(10);
 
-            // wagons vullen met dieren
-            List<Wagon> wagons = wagonController.WagonFiller(animals);
+            // Fill the wagons with animals
+            List<Wagon> wagons = Train.WagonFiller(animals);
 
-            // locomotief printen
-            trainController.PrintWagons(wagons);
-            trainController.PrintLocomotive();
+            // print the train
+            Train.PrintWagons(wagons);
+            Train.PrintLocomotive();
 
-            // Stopwatch stop
-            stopwatchController.Stop();
+            StopwatchController.Stop();
         }
     }
 }

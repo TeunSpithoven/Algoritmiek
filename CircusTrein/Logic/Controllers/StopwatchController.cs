@@ -3,16 +3,16 @@ using System.Diagnostics;
 
 namespace Logic.Controllers
 {
-    public class StopwatchController
+    public static class StopwatchController
     {
-        public Stopwatch StopWatch = new();
+        public static Stopwatch StopWatch = new();
 
-        public void Start()
+        public static void Start()
         {
             StopWatch.Start();
         }
 
-        public void Stop()
+        public static void Stop()
         {
             StopWatch.Stop();
             TimeSpan ts = StopWatch.Elapsed;

@@ -1,12 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
-using Logic.Models;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Logic.Controllers;
 
-namespace Logic.Controllers
+namespace Logic.Models
 {
-    public class TrainController
+    public class Train
     {
-        public void PrintLocomotive()
+        public List<Wagon> Wagons { get; private set; }
+
+        public static List<Wagon> WagonFiller(List<Animal> animals)
+        {
+            List<Wagon> wagons = new();
+            Wagon wagon = new();
+
+            while (animals.Count > 0)
+            {
+                // is er een beest in de lijst die in de wagon past?
+                Animal foundAnimal = Wagon.FindFittingAnimal(animals, wagon);
+                while (foundAnimal != null)
+                {
+                    // ja: doe het beest die er bij kan in de wagon
+                    Wagon.AddAnimalToWagon(foundAnimal, animals, wagon);
+                    foundAnimal = Wagon.FindFittingAnimal(animals, wagon);
+                }
+
+                // nee nieuwe wagon
+                wagons.Add(wagon);
+                wagon = new Wagon();
+            }
+            // Stop
+            return wagons;
+        }
+
+        public static void PrintLocomotive()
         {
             string space = "                                       ";
             Console.WriteLine(space + "    _____");
@@ -15,7 +44,7 @@ namespace Logic.Controllers
             Console.WriteLine(space + " O-O--O-O+++--O-O");
         }
 
-        public void PrintWagons(List<Wagon> wagons)
+        public static void PrintWagons(List<Wagon> wagons)
         {
             foreach (var wagon in wagons)
             {
@@ -72,7 +101,7 @@ namespace Logic.Controllers
 
                 else
                     Console.WriteLine($"{infoSpace}---{wagon.Points}pts---");
-                
+
                 Console.WriteLine("                                            |     ");
             }
         }

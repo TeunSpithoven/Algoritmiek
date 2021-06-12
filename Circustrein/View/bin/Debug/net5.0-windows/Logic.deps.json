@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "View/1.0.0": {
-        "dependencies": {
-          "Logic": "1.0.0"
-        },
-        "runtime": {
-          "View.dll": {}
-        }
-      },
       "Logic/1.0.0": {
         "runtime": {
           "Logic.dll": {}
@@ -22,11 +14,6 @@
     }
   },
   "libraries": {
-    "View/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Logic/1.0.0": {
       "type": "project",
       "serviceable": false,
