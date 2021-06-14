@@ -60,8 +60,6 @@ namespace Logic.Models
             return fittingHerbivoresInList.Count <= 0 ? null : biggestHerbivoreFirst.Last();
         }
 
-        
-
         public bool CanFitInWagon(Animal animal)
         {
             return Points + animal.Points <= 10;

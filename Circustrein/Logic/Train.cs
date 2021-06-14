@@ -41,7 +41,10 @@ namespace Logic.Models
         {
             wagon.Animals.Add(animal);
             wagon.Points += animal.Points;
-            if (_animals == null) return wagon;
+            if (_animals == null)
+            {
+                return wagon;
+            }
             _animals.RemoveAll(x => x.Id == animal.Id);
             return wagon;
         }
