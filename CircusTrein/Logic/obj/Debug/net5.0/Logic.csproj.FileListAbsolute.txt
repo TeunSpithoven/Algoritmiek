@@ -30,14 +30,10 @@ D:\Github\Algoritmiek\CircusTreinvangithub\Logic\obj\Debug\net5.0\Logic.dll
 D:\Github\Algoritmiek\CircusTreinvangithub\Logic\obj\Debug\net5.0\ref\Logic.dll
 D:\Github\Algoritmiek\CircusTreinvangithub\Logic\obj\Debug\net5.0\Logic.pdb
 D:\Github\Algoritmiek\CircusTreinvangithub\Logic\obj\Debug\net5.0\Logic.genruntimeconfig.cache
-D:\Github\Algoritmiek\Circustrein\Logic\bin\Debug\net5.0\Logic.exe
 D:\Github\Algoritmiek\Circustrein\Logic\bin\Debug\net5.0\Logic.deps.json
-D:\Github\Algoritmiek\Circustrein\Logic\bin\Debug\net5.0\Logic.runtimeconfig.json
-D:\Github\Algoritmiek\Circustrein\Logic\bin\Debug\net5.0\Logic.runtimeconfig.dev.json
 D:\Github\Algoritmiek\Circustrein\Logic\bin\Debug\net5.0\Logic.dll
 D:\Github\Algoritmiek\Circustrein\Logic\bin\Debug\net5.0\ref\Logic.dll
 D:\Github\Algoritmiek\Circustrein\Logic\bin\Debug\net5.0\Logic.pdb
-D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.csprojAssemblyReference.cache
 D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.GeneratedMSBuildEditorConfig.editorconfig
 D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.AssemblyInfoInputs.cache
 D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.AssemblyInfo.cs
@@ -45,4 +41,4 @@ D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.csproj.CoreCompil
 D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.dll
 D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\ref\Logic.dll
 D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.pdb
-D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.genruntimeconfig.cache
+D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.csprojAssemblyReference.cache

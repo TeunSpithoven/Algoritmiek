@@ -1,4 +1,5 @@
-﻿namespace Logic
+﻿
+namespace Logic
 {
     public static class Enum
     {

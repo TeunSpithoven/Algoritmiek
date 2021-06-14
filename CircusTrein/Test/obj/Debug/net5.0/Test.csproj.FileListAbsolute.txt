@@ -206,15 +206,11 @@ D:\Github\Algoritmiek\CircusTreinvangithub\Test\obj\Debug\net5.0\Test.dll
 D:\Github\Algoritmiek\CircusTreinvangithub\Test\obj\Debug\net5.0\ref\Test.dll
 D:\Github\Algoritmiek\CircusTreinvangithub\Test\obj\Debug\net5.0\Test.pdb
 D:\Github\Algoritmiek\CircusTreinvangithub\Test\obj\Debug\net5.0\Test.genruntimeconfig.cache
-D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\Logic.exe
 D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\testhost.exe
 D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\testhost.dll
-D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\Logic.deps.json
-D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\Logic.runtimeconfig.json
-D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\Logic.runtimeconfig.dev.json
 D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\Test.deps.json
 D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\Test.runtimeconfig.json
 D:\Github\Algoritmiek\Circustrein\Test\bin\Debug\net5.0\Test.runtimeconfig.dev.json
