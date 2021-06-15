@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Logic.Models
@@ -33,9 +34,9 @@ namespace Logic.Models
                 Animal wagonCarnivore = animal.FindBiggestCarnivore(Animals);
                 // Find bigger herbivores than the carnivore that also fit in the wagon
                 List<Animal> fittingHerbivores = herbivores.Where(herbivore =>
-                    herbivore.Size > wagonCarnivore.Size && CanFitInWagon(herbivore)).ToList();
+                    !AnimalGetsEaten(herbivore) && AnimalFits(herbivore)).ToList();
                 // No animal(s) found: return null / Animal(s) found: return first animal in list.
-                return fittingHerbivores.Count <= 0 ? null : fittingHerbivores.First();
+                return fittingHerbivores.Count <= 0 ? null : animal.FindBiggestHerbivore(fittingHerbivores);
             }
             List<Animal> herbivoresInList = animals.FindAll(x => !x.IsCarnivore);
             // Find fitting herbivores
@@ -44,7 +45,7 @@ namespace Logic.Models
 
             foreach (Animal herbivore in animals)
             {
-                if (CanFitInWagon(herbivore))
+                if (AnimalFits(herbivore))
                     fittingHerbivoresInList.Add(herbivore);
             }
 
@@ -59,9 +60,22 @@ namespace Logic.Models
             return fittingHerbivoresInList.Count <= 0 ? null : biggestHerbivoreFirst.Last();
         }
 
-        public bool A(Animal animalal)
+        public bool AnimalFits(Animal animal)
         {
             return Points + animal.Points <= 10;
+        }
+
+        public bool AnimalGetsEaten(Animal animal)
+        {
+            List<Animal> wagonCarnivores = Animals.FindAll(x => x.IsCarnivore);
+            if (wagonCarnivores.Count > 1)
+                throw new InvalidDataException("Multiple carnivores found in one wagon!");
+            
+            if (wagonCarnivores.Count == 1 && wagonCarnivores[0].Size > animal.Size)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
