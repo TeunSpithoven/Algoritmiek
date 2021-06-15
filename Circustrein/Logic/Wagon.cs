@@ -5,7 +5,6 @@ namespace Logic.Models
 {
     public class Wagon
     {
-        
         public int Id { get; private set; }
         public List<Animal> Animals { get; set; }
         public int Points { get; set; }
@@ -28,7 +27,7 @@ namespace Logic.Models
                 return animal.FindBiggestCarnivore(animals);
 
             // Carnivore is in the wagon
-            if (Animals.Exists(x => x.IsCarnivore))
+            if (Animals.Exists(x=> x.IsCarnivore))
             {
                 List<Animal> herbivores = animals.FindAll(x => !x.IsCarnivore);
                 Animal wagonCarnivore = animal.FindBiggestCarnivore(Animals);
@@ -60,7 +59,7 @@ namespace Logic.Models
             return fittingHerbivoresInList.Count <= 0 ? null : biggestHerbivoreFirst.Last();
         }
 
-        public bool CanFitInWagon(Animal animal)
+        public bool A(Animal animalal)
         {
             return Points + animal.Points <= 10;
         }
