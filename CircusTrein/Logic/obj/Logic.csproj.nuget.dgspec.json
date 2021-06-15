@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj": {}
+    "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj": {}
   },
   "projects": {
-    "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj": {
+    "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj",
+        "projectUniqueName": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj",
+        "projectPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj",
         "packagesPath": "C:\\Users\\teuns\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\obj\\",
+        "outputPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files\\Visual Studio Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\teuns\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,11 @@
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Release\net5.0\Logic.deps.json
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Release\net5.0\Logic.dll
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Release\net5.0\ref\Logic.dll
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Release\net5.0\Logic.pdb
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Release\net5.0\Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Release\net5.0\Logic.AssemblyInfoInputs.cache
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Release\net5.0\Logic.AssemblyInfo.cs
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Release\net5.0\Logic.csproj.CoreCompileInputs.cache
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Release\net5.0\Logic.dll
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Release\net5.0\ref\Logic.dll
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Release\net5.0\Logic.pdb

@@ -5734,19 +5734,19 @@
   },
   "packageFolders": {
     "C:\\Users\\teuns\\.nuget\\packages\\": {},
-    "D:\\Program Files\\Visual Studio Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\Algoritmiek\\Circustrein\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "D:\\Github\\Algoritmiek\\Circustrein\\Test\\Test.csproj",
+      "projectPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\teuns\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\Algoritmiek\\Circustrein\\Test\\obj\\",
+      "outputPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Program Files\\Visual Studio Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\teuns\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5764,8 +5764,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj": {
-              "projectPath": "D:\\Github\\Algoritmiek\\Circustrein\\Logic\\Logic.csproj"
+            "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Users\\teuns\\Documents\\Github\\Gedeeld\\Algoritmiek\\CircusTrein\\Logic\\Logic.csproj"
             }
           }
         }
@@ -5812,7 +5812,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

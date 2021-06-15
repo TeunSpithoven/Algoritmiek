@@ -5,7 +5,6 @@ C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\bin\Debug\n
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\bin\Debug\net5.0-windows\View.dll
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\bin\Debug\net5.0-windows\ref\View.dll
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\bin\Debug\net5.0-windows\View.pdb
-C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\obj\Debug\net5.0-windows\View.csprojAssemblyReference.cache
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\obj\Debug\net5.0-windows\View.Form1.resources
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\obj\Debug\net5.0-windows\View.csproj.GenerateResource.cache
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\obj\Debug\net5.0-windows\View.GeneratedMSBuildEditorConfig.editorconfig
@@ -55,3 +54,7 @@ D:\Github\Algoritmiek\Circustrein\View\obj\Debug\net5.0-windows\View.genruntimec
 D:\Github\Algoritmiek\Circustrein\View\bin\Debug\net5.0-windows\Logic.dll
 D:\Github\Algoritmiek\Circustrein\View\bin\Debug\net5.0-windows\Logic.pdb
 D:\Github\Algoritmiek\Circustrein\View\obj\Debug\net5.0-windows\View.csproj.CopyComplete
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\bin\Debug\net5.0-windows\Logic.dll
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\bin\Debug\net5.0-windows\Logic.pdb
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\obj\Debug\net5.0-windows\View.csproj.AssemblyReference.cache
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\View\obj\Debug\net5.0-windows\View.csproj.CopyComplete

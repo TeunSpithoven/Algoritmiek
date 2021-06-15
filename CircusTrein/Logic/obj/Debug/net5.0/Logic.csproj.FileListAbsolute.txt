@@ -1,11 +1,7 @@
-C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Debug\net5.0\Logic.exe
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Debug\net5.0\Logic.deps.json
-C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Debug\net5.0\Logic.runtimeconfig.json
-C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Debug\net5.0\Logic.runtimeconfig.dev.json
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Debug\net5.0\Logic.dll
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Debug\net5.0\ref\Logic.dll
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\bin\Debug\net5.0\Logic.pdb
-C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Debug\net5.0\Logic.csprojAssemblyReference.cache
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Debug\net5.0\Logic.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Debug\net5.0\Logic.AssemblyInfoInputs.cache
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Debug\net5.0\Logic.AssemblyInfo.cs
@@ -13,7 +9,6 @@ C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Debug\
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Debug\net5.0\Logic.dll
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Debug\net5.0\ref\Logic.dll
 C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Debug\net5.0\Logic.pdb
-C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Debug\net5.0\Logic.genruntimeconfig.cache
 D:\Github\Algoritmiek\CircusTreinvangithub\Logic\bin\Debug\net5.0\Logic.exe
 D:\Github\Algoritmiek\CircusTreinvangithub\Logic\bin\Debug\net5.0\Logic.deps.json
 D:\Github\Algoritmiek\CircusTreinvangithub\Logic\bin\Debug\net5.0\Logic.runtimeconfig.json
@@ -42,3 +37,4 @@ D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.dll
 D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\ref\Logic.dll
 D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.pdb
 D:\Github\Algoritmiek\Circustrein\Logic\obj\Debug\net5.0\Logic.csprojAssemblyReference.cache
+C:\Users\teuns\Documents\Github\Gedeeld\Algoritmiek\CircusTrein\Logic\obj\Debug\net5.0\Logic.csproj.AssemblyReference.cache

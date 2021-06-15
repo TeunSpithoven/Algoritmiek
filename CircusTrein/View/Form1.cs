@@ -55,14 +55,17 @@ namespace View
         // add to list
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             Animal animal = new(id++, isCarnivore, size, points);
             Animals.Add(animal);
             listBox1.Items.Add($"id: {animal.Id}, isCarnivore: {animal.IsCarnivore}, size:  {animal.Size}");
+            this.Cursor = Cursors.Default;
         }
 
         // run logic and print train
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             listBox2.Items.Clear();
             Train train = new Train();
             
@@ -73,6 +76,7 @@ namespace View
             listBox2.Items.Add(space + " O-O--O-O+++--O-O");
 
             PrintWagons(train.WagonFiller(Animals));
+            this.Cursor = Cursors.Default;
         }
 
         private void PrintWagons(List<Wagon> wagons)
@@ -140,6 +144,11 @@ namespace View
 
                 listBox2.Items.Add("                      |     ");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
