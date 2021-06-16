@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Logic.Models;
+using Logic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Test.Integration
 {
     [TestClass]
-    public class WagonControllerIt
+    public class TrainIt
     {
         [TestMethod]
         public void WagonFiller_BigCarnivoreAndMediumHerbivore_InSeparateWagons()
@@ -23,6 +23,7 @@ namespace Test.Integration
             List<Wagon> wagons = train.WagonFiller(animals);
 
             // assert
+            Assert.AreEqual(2, wagons.Count);
             Assert.AreEqual(bigCarnivore, wagons.First().Animals.First());
             Assert.AreEqual(mediumHerbivore, wagons.Last().Animals.First());
         }
@@ -42,9 +43,10 @@ namespace Test.Integration
             List<Wagon> wagons = train.WagonFiller(animals);
 
             // assert
+            Assert.AreEqual(2, wagons.Count);
             Assert.AreEqual(10, wagons.First().Points);
             Assert.AreEqual(10, wagons.First().Animals.Count);
-            Assert.AreEqual(smallHerbivore.Id, wagons.First().Animals.First().Id);
+            Assert.AreEqual(smallHerbivore.Id, wagons[1].Animals.First().Id);
         }
 
         [TestMethod]
@@ -94,11 +96,9 @@ namespace Test.Integration
             List<Wagon> wagons = train.WagonFiller(animals);
 
             Assert.AreEqual(3, wagons.Count);
-            Assert.AreEqual(0, wagons[0].Animals[0].Id);
-            Assert.AreEqual(1, wagons[0].Animals[1].Id);
-            Assert.AreEqual(2, wagons[1].Animals[0].Id);
-            Assert.AreEqual(3, wagons[1].Animals[1].Id);
-            Assert.AreEqual(4, wagons[2].Animals[0].Id);
+            Assert.AreEqual(8, wagons[0].Points);
+            Assert.AreEqual(8, wagons[1].Points);
+            Assert.AreEqual(1, wagons[2].Points);
         }
     }
 }

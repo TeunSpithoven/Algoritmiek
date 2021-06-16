@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace Logic.Models
+namespace Logic
 {
     public class Wagon
     {
@@ -20,62 +20,60 @@ namespace Logic.Models
 
         // This function will find the the animal that fits in the given wagon
         // So no animal will get eaten and the animals will fit in the least amount of wagons.
-        public Animal FindFittingAnimal(List<Animal> animals)
+        public Animal AddFittingAnimal(List<Animal> animals)
         {
-            Animal animal = new Animal();
+            Animal returnAnimal = new Animal();
             // No animal in the wagon and carnivores left.
             if (animals.Exists(x => x.IsCarnivore) && Animals.Count == 0)
-                return animal.FindBiggestCarnivore(animals);
+            {
+                returnAnimal = returnAnimal.FindBiggestCarnivore(animals);
+                AddAnimal(returnAnimal);
+                return returnAnimal;
+            }
 
             // Carnivore is in the wagon
             if (Animals.Exists(x=> x.IsCarnivore))
             {
-                List<Animal> herbivores = animals.FindAll(x => !x.IsCarnivore);
-                Animal wagonCarnivore = animal.FindBiggestCarnivore(Animals);
-                // Find bigger herbivores than the carnivore that also fit in the wagon
-                List<Animal> fittingHerbivores = herbivores.Where(herbivore =>
-                    !AnimalGetsEaten(herbivore) && AnimalFits(herbivore)).ToList();
+                // Find animals that fit and don't eat or get eaten by other animals
+                List<Animal> fittingAnimals = animals.Where(animal =>
+                    !animal.IsCarnivore && !AnimalGetsEaten(animal) && AnimalFits(animal)).ToList();
                 // No animal(s) found: return null / Animal(s) found: return first animal in list.
-                return fittingHerbivores.Count <= 0 ? null : animal.FindBiggestHerbivore(fittingHerbivores);
+                if (fittingAnimals.Count <= 0) return null;
+                returnAnimal = returnAnimal.FindBiggestHerbivore(fittingAnimals);
+                AddAnimal(returnAnimal);
+                return returnAnimal;
             }
-            List<Animal> herbivoresInList = animals.FindAll(x => !x.IsCarnivore);
+
             // Find fitting herbivores
+            List<Animal> fittingHerbivores = animals.Where(animal =>
+                !animal.IsCarnivore && AnimalFits(animal) && !AnimalGetsEaten(animal)).ToList();
 
-            List<Animal> fittingHerbivoresInList = new();
-
-            foreach (Animal herbivore in animals)
-            {
-                if (AnimalFits(herbivore))
-                    fittingHerbivoresInList.Add(herbivore);
-            }
-
-            // List<Animal> fittingHerbivoresInList = herbivoresInList.FindAll(herbivore =>
-            //     Animal.CanFitInWagon(wagon, herbivore));
-
-            // Animal(s) found: return biggest animal / No animal(s) found: return Null
-
-            // HOE VEEL RUIMTE IS ER NOG OVER EN IS ER EEN DIER DIE DAAR IN PAST?
-
-            var biggestHerbivoreFirst = fittingHerbivoresInList.OrderBy(x => x.Size);
-            return fittingHerbivoresInList.Count <= 0 ? null : biggestHerbivoreFirst.Last();
+            if (fittingHerbivores.Count <= 0) return null;
+            var biggestHerbivoreFirst = fittingHerbivores.OrderByDescending(x => x.Size);
+            returnAnimal = biggestHerbivoreFirst.First();
+            AddAnimal(returnAnimal);
+            return returnAnimal;
         }
 
-        public bool AnimalFits(Animal animal)
+        private bool AnimalFits(Animal animal)
         {
             return Points + animal.Points <= 10;
         }
 
-        public bool AnimalGetsEaten(Animal animal)
+        private bool AnimalGetsEaten(Animal animal)
         {
             List<Animal> wagonCarnivores = Animals.FindAll(x => x.IsCarnivore);
             if (wagonCarnivores.Count > 1)
                 throw new InvalidDataException("Multiple carnivores found in one wagon!");
             
-            if (wagonCarnivores.Count == 1 && wagonCarnivores[0].Size > animal.Size)
-            {
-                return true;
-            }
-            return false;
+            return wagonCarnivores.Count == 1 && wagonCarnivores[0].Size >= animal.Size;
+        }
+
+        private Wagon AddAnimal(Animal animal)
+        {
+            Animals.Add(animal);
+            Points += animal.Points;
+            return this;
         }
     }
 }

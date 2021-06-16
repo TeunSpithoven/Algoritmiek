@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using Logic.Models;
+using Logic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Enum = Logic.Enum;
 
 namespace Test.Unit
 {
     [TestClass]
-    public class AnimalControllerTest
+    public class AnimalUt
     {
         [TestMethod]
         public void FindBiggestCarnivore_LargeCarnivore_ReturnsBiggestCarnivore()
@@ -50,33 +50,45 @@ namespace Test.Unit
             Assert.IsNull(biggestCarnivore);
         }
 
-        
         [TestMethod]
-        public void CanFitInWagon_SixPlusThree_ReturnsTrue()
+        public void FindBiggestHerbivore_BigHerbivore_ReturnsBigHerbivore()
         {
             // arrange
-            Wagon wagon = new(0) {Points = 6};
-            Animal animal = new(0, true, 1, 3);
+            Animal animal = new Animal();
+            List<Animal> animals = new()
+            {
+                new Animal(0, false, 2, 5),
+                new Animal(1, true, 1, 3),
+                new Animal(3, true, 2, 5)
+            };
 
             // act
-            bool success = wagon.CanFitInWagon(animal);
+            Animal biggestHerbivore = animal.FindBiggestHerbivore(animals);
 
-            //assert
-            Assert.AreEqual(true, success);
+            // assert
+            Assert.AreEqual(0, biggestHerbivore.Id);
+            Assert.AreEqual(false, biggestHerbivore.IsCarnivore);
+            Assert.AreEqual(2, biggestHerbivore.Size);
+            Assert.AreEqual(5, biggestHerbivore.Points);
         }
 
         [TestMethod]
-        public void CanFitInWagon_SixPlusFive_ReturnsFalse()
+        public void FindBiggestHerbivore_NoHerbivore_ReturnsNull()
         {
             // arrange
-            Wagon wagon = new(0) {Points = 6};
-            Animal animal = new(0, true, 2, 5);
+            Animal animal = new();
+            List<Animal> animals = new()
+            {
+                new Animal(0, true, 2, 5),
+                new Animal(1, true, 1, 3),
+                new Animal(2, true, 0, 1)
+            };
 
             // act
-            bool success = wagon.CanFitInWagon(animal);
+            Animal biggestHerbivore = animal.FindBiggestHerbivore(animals);
 
-            //assert
-            Assert.IsFalse(success);
+            // assert
+            Assert.IsNull(biggestHerbivore);
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿using Logic.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Logic;
 using Enum = Logic.Enum;
 
 namespace View

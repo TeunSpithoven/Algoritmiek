@@ -1,34 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Logic.Models;
+using Logic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Enum = Logic.Enum;
 
 namespace Test.Unit
 {
     [TestClass]
-    public class WagonUT
+    public class WagonUt
     {
         [TestMethod]
-        public void AddAnimalToWagon_MediumCarnivoreInEmptyWagon_AnimalAddedToWagon()
-        {
-            // arrange
-            Train train = new();
-            Wagon wagon = new(0);
-            List<Animal> animals = new();
-            Animal animal = new(0, true, 1, 3);
-            animals.Add(animal);
-
-            // act
-            wagon = train.AddAnimalToWagon(animals.First(), wagon);
-
-            // assert
-            Assert.AreEqual(animal, wagon.Animals.First());
-        }
-
-        [TestMethod]
-        public void FindFittingAnimal_MediumCarnivoreInWagonLargeHerbivoreInList_ReturnsLargeHerbivore()
+        public void AddFittingAnimal_MediumCarnivoreInWagonLargeHerbivoreInList_ReturnsLargeHerbivore()
         {
             // arrange
             Wagon wagon = new(0);
@@ -39,14 +22,14 @@ namespace Test.Unit
             animals.Add(largeHerbivore);
 
             // act
-            Animal foundAnimal = wagon.FindFittingAnimal(animals);
+            Animal foundAnimal = wagon.AddFittingAnimal(animals);
 
             // assert
             Assert.AreEqual(largeHerbivore, foundAnimal);
         }
 
         [TestMethod]
-        public void FindFittingAnimal_LargeCarnivoreInWagonMediumHerbivoreInList_ReturnsNull()
+        public void AddFittingAnimal_LargeCarnivoreInWagonMediumHerbivoreInList_ReturnsNull()
         {
             // arrange
             Wagon wagon = new(0);
@@ -57,14 +40,14 @@ namespace Test.Unit
             animals.Add(mediumHerbivore);
 
             // act
-            Animal foundAnimal = wagon.FindFittingAnimal(animals);
+            Animal foundAnimal = wagon.AddFittingAnimal(animals);
 
             // assert
             Assert.IsNull(foundAnimal);
         }
 
         [TestMethod]
-        public void FindFittingAnimal_OneSmallOneLargeHerbivoreInList_ReturnsLargeHerbivore()
+        public void AddFittingAnimal_OneSmallOneLargeHerbivoreInList_ReturnsLargeHerbivore()
         {
             // arrange
             Wagon wagon = new(0);
@@ -76,7 +59,7 @@ namespace Test.Unit
             animals.Add(smallHerbivore);
 
             // act
-            Animal foundAnimal = wagon.FindFittingAnimal(animals);
+            Animal foundAnimal = wagon.AddFittingAnimal(animals);
 
             // assert
             // Assert.AreEqual(largeHerbivore.Id, foundAnimal.Id);
